@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
+import dummy from './dummy-data';
 import SearchBar from './components/SearchBar';
 
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+class App extends Component {
+  constructor() {
+    super();
+    this.state= {
+      dummy,
+    };
+  }
+
+  render() {
+    return (
+      <div className='App'>
         <SearchBar/>
-      </header>
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;

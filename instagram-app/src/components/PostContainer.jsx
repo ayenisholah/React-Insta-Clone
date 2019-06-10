@@ -1,13 +1,13 @@
 import React from 'react';
 
-function SearchBar(props) {
+function PostContainer(props) {
     return (
         <>
             {
-                
+
             }
         </>
     );
 }
 
-export default SearchBar;
+export default PostContainer;
