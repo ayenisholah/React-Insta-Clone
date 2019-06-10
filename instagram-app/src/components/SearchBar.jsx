@@ -4,7 +4,7 @@ import React from 'react';
 function SearchBar() {
     return (
         <>
-            <img src="./assets/ig_search_bar.png" alt="Search Bar"/>
+            <img src="\assets\ig_search_bar.png" alt="Search Bar"/>
         </>
     );
 }
