@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import dummy from './dummy-data';
+import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar';
+import PostContainer from './components/PostContainer';
 
 
 class App extends Component {
   constructor() {
     super();
     this.state= {
-      dummy,
+      instagram: dummyData,
+      currentUser: null
     };
   }
 
@@ -15,6 +17,9 @@ class App extends Component {
     return (
       <div className='App'>
         <SearchBar/>
+        <PostContainer
+          instagram={this.state.instagram}
+        />
       </div>
     );
   }
