@@ -11,12 +11,14 @@ function PostContainer(props) {
                         className='container'
                     >
                         <div className='profile'>
-                        <img src={instagram.thumbnailUrl} alt={instagram.username}/>
+                        <img className="avi" src={instagram.thumbnailUrl} alt={instagram.username}/>
                         <h3>{instagram.username}</h3>
                         </div>
-                        <img src={instagram.imageUrl} alt={instagram.username}/>
+                        <div className="content">
+                            <img src={instagram.imageUrl} alt={instagram.username}/>
                             <p>{instagram.likes} likes</p>
                             <p>{instagram.timestamp}</p>
+                        </div>
                     </div>
                 ))
             }
