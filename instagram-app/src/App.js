@@ -1,46 +1,34 @@
 import React, { Component } from 'react';
-import SearchBar from './components/SearchBar';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer';
+import PostPage from './components/PostContainer/PostPage';
+import LoginPage from './components/LoginPage/LoginPage'
+import withAuthentication from './components/Authentication/Authentication';
+
 
 class App extends Component {
-  constructor(props) {
+  constructor() {
     console.log('Constructing....')
-    super(props);
+    super();
     this.state={
-      instagram: [],
-      currentComment: null
+      data: []
     };
-  }
-
-  componentDidMount() {
-    console.log('Component Mounted!') 
-
-    setTimeout(() => {
-      this.setState({ instagram: dummyData })
-    }, 1000);
-
-  }
-
-  likePhoto = id => {
-    
-  }
-
-  addNewComment = id => {
-    
   }
 
   render() {
     console.log('rendering...')
     return (
       <div className='App'>
-        <SearchBar/>
-        <PostContainer
-        instagram={this.state.instagram}
-        />
+        <h1>You're Logged In: { this.props.isAuthed.toString() }</h1>
+        {
+          this.props.isAuthed === false &&
+          <LoginPage login={this.props.login} />
+        }
+        {
+          this.props.isAuthed === true &&
+          <PostPage logout={this.props.logout} />
+        }
       </div>
     );
   }
 }
 
-export default App;
+export default withAuthentication(App);
