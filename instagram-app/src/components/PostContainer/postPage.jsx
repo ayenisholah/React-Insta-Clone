@@ -1,8 +1,6 @@
 import React from 'react';
-import '../../App.css';
-import LoginPage from '../LoginPage/LoginPage';
 
-const PostPage = (props) => {
+const LoginPage = (props) => {
   return (
     <div className='page post'>
       <div>Placeholder</div>
@@ -12,4 +10,4 @@ const PostPage = (props) => {
   );
 }
 
-export default PostPage
+export default LoginPage;
