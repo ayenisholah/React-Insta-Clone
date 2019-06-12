@@ -1,20 +1,19 @@
 import React from 'react';
 
-function CommentSection (props) {
-    return (
-        <>
-            {
-                props.instagram.map(instagram => (
-                    <div
-                        key={instagram.id}
-                        className='comment'
-                    >
-                        CommentSection
-                    </div>
-                ))
-            }
-        </>
-    );
+function CommentSection(props) {
+  
+console.log(props)
+  return (
+    <>
+      Comment
+    </>
+  )
+
+
 }
 
+
 export default CommentSection;
+
+
+
