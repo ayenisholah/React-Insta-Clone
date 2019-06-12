@@ -1,0 +1,13 @@
+.profile {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.avi {
+    border-radius: 50%;
+}
+
+.content {
+    padding: 10px;
+}
