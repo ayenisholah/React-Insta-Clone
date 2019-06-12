@@ -9,10 +9,24 @@ export default function withAuthentication(Component) {
       }
     }
 
+    componentDidMount() {
+      if (localStorage.getItem('is_authed')) {
+        this.setState({ isAuthed: true });
+      }
+    }
+
+    login = () => {
+      localStorage.setItem('is_authed', true);
+      this.setState({ isAuthed: true });
+    }
+
     render() {
       return (
-        <>
-        </>
+        <Component
+          isAuthed={this.state.isAuthed}
+          login={this.login}
+        />
+        
       )
     }
   }
