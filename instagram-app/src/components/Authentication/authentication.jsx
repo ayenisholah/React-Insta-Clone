@@ -32,7 +32,6 @@ export default function withAuthentication(Component) {
           login={this.login}
           logout={this.logout}
         />
-        
       )
     }
   }
